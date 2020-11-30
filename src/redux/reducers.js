@@ -14,6 +14,12 @@ const rootReducer = (
                 token: action.token,
                 roles: action.roles
             }
+        case 'LOGOUT':
+            return{
+                ...state,
+                token: action.token,
+                roles: action.roles
+            }
         default:
             return state
     }

@@ -6,8 +6,8 @@ import UsersTable from '../components/UsersTable'
 function UserDashboard(props) {
   return (
     <div>
-      USUARIO LOGEADO
-      <UsersTable {...props} />
+      MODERADOR LOGEADO
+      <UsersTable {...props} isModerator={true} />
       <LogoutUser {...props} />
     </div>
   );

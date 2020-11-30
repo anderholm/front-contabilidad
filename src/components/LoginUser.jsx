@@ -35,9 +35,11 @@ function LoginUser(props) {
         localStorage.setItem("token", response.data.token);
         if (roles && roles === "admin") {
           props.history.push("/admin");
-        } else if (roles && roles === "user") {
-          props.history.push("/user");
-        }
+        } else if (roles && roles === "moderator") {
+          props.history.push("/moderator");
+        } else(
+          props.history.push('/user')
+        )
       })
 
       .catch((err) => {
