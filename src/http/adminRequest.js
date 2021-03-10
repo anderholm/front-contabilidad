@@ -13,3 +13,15 @@ export const allUsers = (token) => {
     });
   return request;
 };
+
+export const allEmpresas = (token) => {
+  let request = axios
+    .get("empresas/", { headers: { "x-access-token": token } })
+    .then((response) => {
+      return response;
+    })
+    .catch((err) => {
+      return err;
+    });
+    return request
+};
